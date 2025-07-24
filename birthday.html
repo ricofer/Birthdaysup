@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Greeting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to right top, #f9d423, #ff4e50);
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    #greeting {
+      display: none;
+      font-size: 2rem;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: 30px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    button {
+      background-color: #fff;
+      color: #ff4e50;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffe0e0;
+    }
+
+    .cake-emoji {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">Press The Button 🎁</h1>
+  <button onclick="showGreeting()"> Press Me!</button>
+
+  <div id="greeting">
+    <div class="cake-emoji">🎉🎂🎈</div>
+    <strong>Happy Birthday!</strong><br>
+    shaaaaaaaaaaaaaaaaaaaaaaaaa, from kuyang, testing testing lang 
+  </div>
+
+  <script>
+    function showGreeting() {
+      document.getElementById("greeting").style.display = "block";
+      document.getElementById("title").style.display = "none";
+      document.querySelector("button").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
